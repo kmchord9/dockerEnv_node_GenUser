@@ -8,5 +8,9 @@
 
     "extensions": [
         "dbaeumer.vscode-eslint"
-    ]
+    ],
+
+    "forwardPorts": [3000],
+
+    "postCreateCommand": "yarn install"
 }
