@@ -4,15 +4,12 @@ ARG DOCKER_UID=1000
 ARG DOCKER_USER=node
 ARG DOCKER_PASSWORD=docker
 
-RUN apt-get update && apt-get install -y && \
-  #package
-  sudo && \
+RUN apt-get update && apt-get install -y sudo && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* && \
   #node module(global)
-  yarn global add && \
-  webpack && \
-  react-dom && \
+  yarn global add webpack \
+  react-dom \
   react && \
   #useradd -m --uid ${DOCKER_UID} --groups sudo ${DOCKER_USER} && \
   usermod -G sudo ${DOCKER_USER} && \
