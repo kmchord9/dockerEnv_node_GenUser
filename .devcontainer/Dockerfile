@@ -1,4 +1,3 @@
-
 FROM node:12.18
 
 ARG DOCKER_UID=1000
