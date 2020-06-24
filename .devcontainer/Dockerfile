@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y sudo \
   echo "${DOCKER_USER}:x:${DOCKER_UID}:${gid}:${DOCKER_USER},,,::/bin/bash" >> /etc/passwd && \
   echo "${DOCKER_USER}:x:${DOCKER_UID}:" >> /etc/group && \
   echo "Set disable_coredump false" >> /etc/sudo.conf && \
-  echo export PATH='$PATH:$HOME/.yarn/bin'
+  echo export PATH='$PATH:$HOME/.yarn/bin' >> ~/.bashrc
 
 USER ${DOCKER_USER}
 
